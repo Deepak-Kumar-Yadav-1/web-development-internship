@@ -3,10 +3,12 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Fake tab-switching feel: clicking a tab just scrolls to matching section
 const tabs = document.querySelectorAll('.tab');
+const blocks = document.querySelectorAll('.block');
 const sections = {
-  0: null, // portfolio.dky = top of page
-  1: document.querySelector('.block'), // about.md
-  2: document.getElementById('contact') // contact.txt
+  0: null,               // portfolio.dky = top of page
+  1: blocks[0],          // about.md
+  2: blocks[2],          // projects.json
+  3: document.getElementById('contact') // contact.txt
 };
 
 tabs.forEach((tab, i) => {
